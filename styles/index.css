@@ -1,0 +1,78 @@
+:root {
+  --hjem-bg: #13132e; /* samme som Vanta 0x13132e */
+}
+
+body {
+  padding-top: 56px; /* plass til fast navbar */
+}
+
+.navbar.fixed-top {
+  background-color: var(--hjem-bg);
+}
+
+.navbar.navbar-dark.fixed-top .navbar-brand,
+.navbar.navbar-dark.fixed-top .navbar-brand:hover,
+.navbar.navbar-dark.fixed-top .navbar-brand:focus,
+.navbar.navbar-dark.fixed-top .nav-link,
+.navbar.navbar-dark.fixed-top .nav-link:hover,
+.navbar.navbar-dark.fixed-top .nav-link:focus {
+  color: #fff;
+}
+
+.navbar.fixed-top .container-fluid {
+  --nav-luft: 0.75rem;
+  padding-left: var(--nav-luft);
+  padding-right: var(--nav-luft);
+}
+
+.navbar.fixed-top .navbar-brand {
+  gap: var(--nav-luft);
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+  mix-blend-mode: screen; /* svart bakgrunn i PNG blir usynlig på mørk navbar */
+}
+
+.navbar-brand,
+h1,
+h2 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: 400;
+}
+
+#hjem {
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 56px);
+  scroll-margin-top: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 8vw;
+}
+
+#hjem .hjem-innhold {
+  position: relative;
+  z-index: 1;
+  color: #eaeaea;
+  padding: 0 1.5rem;
+}
+
+#hjem .hjem-ingress {
+  margin-top: 0.75rem;
+  font-size: 1.15rem;
+}
+
+#hjem canvas {
+  position: absolute !important;
+  z-index: 0;
+}
+#om-meg,
+#prosjektet,
+#om-nkom {
+  min-height: 100vh;
+  scroll-margin-top: 72px; /* anker-hopp lander under menyen */
+}
