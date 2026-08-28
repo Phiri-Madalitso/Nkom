@@ -34,14 +34,14 @@ function visInnlegg() {
         .filter(Boolean)
         .join(" ");
       return (
-        "<article class=\"dagbok-kort\">" +
-        "<p class=\"dagbok-kort-dato\">" +
+        "<details class=\"dagbok-kort\">" +
+        "<summary class=\"dagbok-kort-dato\">" +
         escapeHtml(formaterKortDato(side.dato)) +
-        "</p>" +
+        "</summary>" +
         "<p class=\"dagbok-kort-tekst\">" +
-        escapeHtml(brodtekst) +
+        escapeHtml(brodtekst).replace(/\n/g, "<br>") +
         "</p>" +
-        "</article>"
+        "</details>"
       );
     })
     .join("");

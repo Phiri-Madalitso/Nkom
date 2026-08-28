@@ -2,8 +2,13 @@
   --hjem-bg: #13132e; /* samme som Vanta 0x13132e */
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   padding-top: 56px; /* plass til fast navbar */
+  overflow-x: hidden;
 }
 
 .navbar.fixed-top {
@@ -28,6 +33,8 @@ body {
 .navbar.fixed-top .navbar-brand {
   gap: var(--nav-luft);
   margin-left: 8vw; /* inn mot midten, fortsatt venstre — samme som Hjem-teksten */
+  min-width: 0;
+  max-width: calc(100% - 3.5rem);
 }
 
 .navbar-brand img {
@@ -328,15 +335,207 @@ h2 {
 .dagbok-kort-dato {
   font-weight: 700;
   color: var(--hjem-bg);
-  margin-bottom: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.dagbok-kort-dato::-webkit-details-marker {
+  display: none;
+}
+
+.dagbok-kort-dato::after {
+  content: "▾";
+  float: right;
+  font-weight: 400;
+}
+
+.dagbok-kort[open] .dagbok-kort-dato::after {
+  content: "▴";
 }
 
 .dagbok-kort-tekst {
   color: #333;
-  margin-bottom: 0;
+  margin: 0.85rem 0 0;
   line-height: 1.55;
 }
 
 .dagbok-tom {
   color: #6c757d;
+}
+
+.status-side {
+  background-color: #f3f3f5;
+}
+
+.status-hoved {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.status-tidslinje {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.status-tidslinje-prikk {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--hjem-bg);
+  flex-shrink: 0;
+}
+
+.status-tidslinje-dato {
+  margin: 0;
+  font-weight: 700;
+  color: var(--hjem-bg);
+}
+
+.status-kort {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.65rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid var(--hjem-bg);
+  text-align: left;
+}
+
+.status-kort h2 {
+  font-family: system-ui, sans-serif;
+  color: var(--hjem-bg);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.85rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.status-kort > p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.status-milepaeler {
+  background: #ececef;
+  border-radius: 0.6rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.status-milepaeler h3 {
+  font-family: system-ui, sans-serif;
+  color: var(--hjem-bg);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+}
+
+.status-milepaeler ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #333;
+}
+
+.status-milepaeler li {
+  margin-bottom: 0.4rem;
+}
+
+.status-milepaeler li:last-child {
+  margin-bottom: 0;
+}
+
+.status-bilde {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 991.98px) {
+  .navbar-merke-tekst {
+    display: none;
+  }
+
+  .navbar.fixed-top .navbar-brand {
+    margin-left: 0;
+    max-width: none;
+  }
+
+  #hjem {
+    padding: 1rem;
+    min-height: calc(100svh - 56px);
+  }
+
+  #hjem .hjem-innhold {
+    padding: 1.1rem 1.15rem;
+    max-width: 100%;
+  }
+
+  #hjem .hjem-innhold h1 {
+    font-size: 1.45rem;
+  }
+
+  #hjem .hjem-ingress {
+    font-size: 1rem;
+  }
+
+  #om-meg,
+  #prosjektet,
+  #om-nkom {
+    min-height: auto;
+    padding-top: 3.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .om-nkom-innhold {
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+
+  #om-meg .om-meg-kort {
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  #om-meg .om-meg-kort:hover {
+    transform: none;
+  }
+
+  .om-meg-modal .modal-dialog {
+    margin: 0.75rem;
+  }
+
+  .om-meg-modal .modal-content {
+    padding: 2rem 1.15rem 1.25rem;
+  }
+
+  .om-meg-modal-bilde {
+    width: 120px;
+    height: 120px;
+  }
+
+  .om-meg-modal-navn {
+    font-size: 1.4rem;
+  }
+
+  .dagbok-hoved,
+  .status-hoved {
+    padding: 1.5rem 1rem 3rem;
+  }
+
+  .dagbok-maaned {
+    flex: 1 1 calc(50% - 0.45rem);
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.4rem;
+  }
 }
