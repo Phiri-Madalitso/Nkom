@@ -363,6 +363,102 @@ h2 {
   color: #6c757d;
 }
 
+.status-side {
+  background-color: #f3f3f5;
+}
+
+.status-hoved {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.status-tidslinje {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.status-tidslinje-prikk {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--hjem-bg);
+  flex-shrink: 0;
+}
+
+.status-tidslinje-dato {
+  margin: 0;
+  font-weight: 700;
+  color: var(--hjem-bg);
+}
+
+.status-kort {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.65rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid var(--hjem-bg);
+  text-align: left;
+}
+
+.status-kort h2 {
+  font-family: system-ui, sans-serif;
+  color: var(--hjem-bg);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 0.85rem;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.status-kort > p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.status-milepaeler {
+  background: #ececef;
+  border-radius: 0.6rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.status-milepaeler h3 {
+  font-family: system-ui, sans-serif;
+  color: var(--hjem-bg);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.65rem;
+}
+
+.status-milepaeler ul {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: #333;
+}
+
+.status-milepaeler li {
+  margin-bottom: 0.4rem;
+}
+
+.status-milepaeler li:last-child {
+  margin-bottom: 0;
+}
+
+.status-bilde {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 991.98px) {
   .navbar-merke-tekst {
     display: none;
@@ -431,7 +527,8 @@ h2 {
     font-size: 1.4rem;
   }
 
-  .dagbok-hoved {
+  .dagbok-hoved,
+  .status-hoved {
     padding: 1.5rem 1rem 3rem;
   }
 
