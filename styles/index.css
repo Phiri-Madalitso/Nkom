@@ -113,14 +113,16 @@ h2 {
 }
 
 #om-meg,
-#om-nkom {
+#om-nkom,
+#prosjektet {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding-bottom: 4rem;
 }
 
-.om-nkom-innhold {
+.om-nkom-innhold,
+.prosjekt-innhold {
   max-width: 42rem;
   width: 100%;
   margin-top: 2rem;
@@ -130,14 +132,34 @@ h2 {
   overflow-wrap: break-word;
 }
 
-.om-nkom-innhold h3 {
+.om-nkom-innhold h3,
+.prosjekt-innhold h3 {
   font-size: 1.15rem;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.om-nkom-innhold p {
+.prosjekt-innhold h3:first-child {
+  margin-top: 0;
+}
+
+.prosjekt-innhold a {
+  color: var(--hjem-bg);
+}
+
+.om-nkom-innhold p,
+.prosjekt-innhold p {
   margin-bottom: 0.85rem;
+}
+
+.prosjekt-innhold ul,
+.prosjekt-innhold ol {
+  margin-bottom: 1rem;
+  padding-left: 1.25rem;
+}
+
+.prosjekt-innhold li {
+  margin-bottom: 0.35rem;
 }
 
 #om-meg .om-meg-kort {
@@ -496,7 +518,8 @@ h2 {
     padding-right: 1rem;
   }
 
-  .om-nkom-innhold {
+  .om-nkom-innhold,
+  .prosjekt-innhold {
     padding: 0;
     margin-top: 1.5rem;
   }

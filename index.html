@@ -72,6 +72,56 @@
 
   <section id="prosjektet">
     <h2>Prosjektet</h2>
+    <div class="prosjekt-innhold">
+      <h3>Frekvensovervåkning: FK-fjernkontroll</h3>
+      <p>Jeg er Madalitso Phiri Skjelnes, IT- og informasjonssystemstudent ved Universitetet i Agder (<a href="mailto:madalitsos@uia.no">madalitsos@uia.no</a>). I praksis hos Nkom, Spektrum, jobber jeg som fullstack-utvikler.</p>
+
+      <h3>Hva prosjektet er</h3>
+      <p>Jeg jobber med FK-fjernkontroll: et system for oversikt over målestasjoner som brukes til måling av frekvensbruk. Målingene kan tas på land (blant annet med utstyr i bil), eller i felt med mobil/koffert og avtaler med skip rundt i Norge.</p>
+      <p>På lokasjonene står måleutstyr sammen med en liten PC som kan fjernstyres og kobles på (LattePanda). Tidligere var det dårlig oversikt over hva som sto hvor, og hvem som hadde ansvar. Nkom har gått over til Pure Service, men målet er å erstatte Pure Service med en felles, mer lesbar oversikt.</p>
+      <p>Spektrum har behov for nytt fjernstyringssystem for måleutstyret. Et eksempel er målestasjonen Brannmyra, der det i dag ikke ligger måleutstyr lokalt på den måten vi trenger — informasjon må hentes fra Pure Service.</p>
+
+      <h3>Behovet</h3>
+      <p>Jeg skal bidra til et system der utstyr og stasjoner er registrert, slik at man kan identifisere dem og ha en database- og oversiktsløsning. Noen adresser er sensitive. Per i dag kjøres mye direkte på PC; sensitiv tilgang ekskluderes i første omgang.</p>
+      <p>Første steg er å forstå hvordan det gjøres i dag, og hvilke svakheter som finnes, slik at vi vet hva som kan bli bedre. Eksempler er dårlig lesbarhet (mange like gruppefelt) og slettknapp som må tenkes gjennom.</p>
+
+      <h3>Komponenter og utfordringer</h3>
+      <ul>
+        <li>Bredbånd på lokasjonene</li>
+        <li>LattePanda — den lille PCen som fjernstyrer og kobler seg på, sammen med måleutstyr</li>
+        <li>Utfordring: mobilbredbåndet ble plutselig flyttet rundt, noe som gjorde det krevende å holde oversikt</li>
+      </ul>
+
+      <h3>Teknologi og rammer</h3>
+      <p>Jeg bygger mot en .NET-webapplikasjon i C#, med React og TypeScript i frontend. Det finnes en front-baseline i GitHub. Løsningen kjører lokalt i starten; sikkerhet er ikke hovedfokus nå, men bør komme etter hvert.</p>
+      <p>Vi må velge database eller fil, et lag som opererer på dataene, og et lag som viser dem. Det skal være et tydelig sted for vedlegg. Jeg skal også se på datamodellering og skalering: hva skjer når det kommer nytt utstyr?</p>
+      <p>Det skilles mellom funksjonelle krav (knapper og hva som skjer når man trykker) og ikke-funksjonelle krav (struktur, hvordan ting bygges, database).</p>
+      <p>Nkom har både en IT-side og en Spektrum-side. Behovet for fjernstyring og oversikt kommer fra Spektrum. Master data betyr én sannhet per type data. Best at løsningen leser data uten å endre kilden — sannheten skal leve ett sted. Fremover bør vi se på ServiceNow (API-et er dokumentert). Metodikk: Scrum og Kanban.</p>
+
+      <h3>Funksjonelle krav (første del)</h3>
+      <ol>
+        <li>Nettside med kartvisning av målestasjoner, med filtrering faste / mobile</li>
+        <li>Tabell med bare felt som er avgjørende i første del</li>
+        <li>Utstyrsliste med filtrering</li>
+        <li>Gå inn på en stasjon og se mer: utstyr, plassering, bilder</li>
+        <li>Bilder mer oversiktlige (bedre navn, gruppering av ting som går igjen)</li>
+        <li>Logg med datoer og tydelig oversikt</li>
+        <li>Kunde / kontaktperson</li>
+        <li>Oppsummert visning av den øvrige informasjonen</li>
+        <li>Oppdatert filtrering på kart, lett å lese og finne frem</li>
+        <li>Notat / husk</li>
+        <li>Flere objekter på samme sted: hover, popup, og mulighet til å bla til neste</li>
+        <li>Avklare hva som er standardisert og hva som ikke er det</li>
+        <li>Standardisering av begreper og felt</li>
+        <li>Felt for husk / tiltak — blant annet kritisk / må gjøres</li>
+      </ol>
+
+      <h3>Hva jeg prioriterer</h3>
+      <p>Jeg skal først lukke ut støy, gjøre kjernen robust, og holde løsningen lett å skalere slik at funksjonalitet kan bygges på senere. Fokus er kjernefunksjonalitet, ikke alt på en gang. Neste steg er skisse for hvordan løsningen kan se ut, entiteter, relasjoner og felt.</p>
+
+      <h3>Problemstilling</h3>
+      <p>Hvordan kan jeg optimalisere dagens oversikt og arbeidsflyt for målestasjoner og fjernkontroll — og hva innebærer det å fylle rollen som fullstack-utvikler i dette arbeidet (forstå dagens praksis, modellere data, og bygge et lesbart, skalerbart system oppå master data)?</p>
+    </div>
   </section>
 
   <section id="om-meg">
