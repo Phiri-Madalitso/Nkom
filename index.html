@@ -126,14 +126,25 @@
 
   <section id="om-meg">
     <h2>Om meg</h2>
-    <button type="button" class="card om-meg-kort" data-bs-toggle="modal" data-bs-target="#madalitsoModal">
-      <img src="images/om-meg.jpg" class="om-meg-kort-bilde" alt="Portrett av Madalitso">
-      <div class="card-body">
-        <h3 class="om-meg-kort-navn">Madalitso</h3>
-        <p class="om-meg-kort-rolle">Full-Stack Utvikler</p>
-        <p class="om-meg-kort-tekst">Interesse for full-stack utvikling, sikkerhet og fokus på levere fungerende og estetiske løsninger.</p>
-      </div>
-    </button>
+    <div class="om-meg-rad">
+      <button type="button" class="card om-meg-kort" data-bs-toggle="modal" data-bs-target="#madalitsoModal">
+        <img src="images/om-meg.jpg" class="om-meg-kort-bilde" alt="Portrett av Madalitso">
+        <div class="card-body">
+          <h3 class="om-meg-kort-navn">Madalitso</h3>
+          <p class="om-meg-kort-rolle">Full-Stack Utvikler</p>
+          <p class="om-meg-kort-tekst">Interesse for full-stack utvikling, sikkerhet og fokus på levere fungerende og estetiske løsninger.</p>
+        </div>
+      </button>
+
+      <button type="button" class="card om-meg-kort" data-bs-toggle="modal" data-bs-target="#dennisModal">
+        <img src="images/dennis/sommerlopet.jpg" class="om-meg-kort-bilde" alt="Portrett av Dennis">
+        <div class="card-body">
+          <h3 class="om-meg-kort-navn">Dennis</h3>
+          <p class="om-meg-kort-rolle">UX/UI &amp; Frontend-utvikler</p>
+          <p class="om-meg-kort-tekst">Interesse for UX/UI, frontend og webutvikling, og hvordan teknologi og AI påvirker mennesker og samfunn.</p>
+        </div>
+      </button>
+    </div>
   </section>
 
   <div class="modal fade om-meg-modal" id="madalitsoModal" tabindex="-1" aria-labelledby="madalitsoModalLabel" aria-hidden="true">
@@ -157,6 +168,25 @@
           <a href="https://github.com/Phiri-Madalitso?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <i class="bi bi-github"></i>
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade om-meg-modal" id="dennisModal" tabindex="-1" aria-labelledby="dennisModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <a href="dennis.html" class="om-meg-modal-utvid">Hvem er Dennis</a>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Lukk"></button>
+        <img src="images/dennis/sommerlopet.jpg" class="om-meg-modal-bilde" alt="Portrett av Dennis">
+        <h3 class="om-meg-modal-navn" id="dennisModalLabel">Dennis</h3>
+        <hr class="om-meg-modal-strek">
+        <p class="om-meg-modal-rolle">UX/UI &amp; Frontend-utvikler</p>
+        <p class="om-meg-modal-sammendrag">Interesse for UX/UI, frontend og webutvikling, og hvordan teknologi og AI påvirker mennesker og samfunn.</p>
+        <div class="om-meg-modal-mer">
+          <h4>Litt mer om Dennis</h4>
+          <hr>
+          <p>Jeg er rolig, nysgjerrig, strukturert, målrettet og hardtarbeidende, og liker å ha en plan og god oversikt enten det gjelder skole, jobb eller reiser. Trykk på "Hvem er Dennis" for å lese mer og se bilder.</p>
         </div>
       </div>
     </div>
