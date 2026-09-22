@@ -162,6 +162,13 @@ h2 {
   margin-bottom: 0.35rem;
 }
 
+.om-meg-rad {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
 #om-meg .om-meg-kort {
   width: 18rem;
   margin-top: 2rem;
@@ -224,6 +231,26 @@ h2 {
   position: absolute;
   top: 1rem;
   right: 1rem;
+}
+
+.om-meg-modal-utvid {
+  position: absolute;
+  top: 1.1rem;
+  right: 3.1rem;
+  background-color: var(--hjem-bg);
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.om-meg-modal-utvid:hover {
+  background-color: #24244a;
+  color: #fff;
 }
 
 .om-meg-modal-bilde {
@@ -479,6 +506,103 @@ h2 {
   margin-right: auto;
   border-radius: 0.75rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dennis-side {
+  background-color: #f3f3f5;
+}
+
+.dennis-hoved {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.dennis-tilbake {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--hjem-bg);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+.dennis-tilbake:hover {
+  text-decoration: underline;
+}
+
+.dennis-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.dennis-portrett {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--hjem-bg);
+}
+
+.dennis-header h1 {
+  margin-bottom: 0.15rem;
+}
+
+.dennis-rolle {
+  color: #6c757d;
+  font-style: italic;
+  margin: 0;
+}
+
+.dennis-seksjon {
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.65rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid var(--hjem-bg);
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.dennis-seksjon h2 {
+  font-family: system-ui, sans-serif;
+  color: var(--hjem-bg);
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.dennis-seksjon p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+
+.dennis-seksjon p:last-child {
+  margin-bottom: 0;
+}
+
+.dennis-galleri {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.dennis-galleri img {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 575.98px) {
+  .dennis-galleri {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 991.98px) {
