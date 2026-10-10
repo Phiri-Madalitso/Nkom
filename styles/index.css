@@ -3,6 +3,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -93,123 +94,252 @@ h2 {
   position: absolute !important;
   z-index: 0;
 }
-#om-meg,
-#prosjektet,
-#om-nkom {
-  min-height: 100vh;
+.seksjon {
   scroll-margin-top: 72px; /* anker-hopp lander under menyen */
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 5rem;
+  padding: 5rem 1.5rem;
+  background: #fff;
+}
+
+.seksjon-lys {
+  background: #f7f7f9;
+}
+
+.seksjon-indre {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.seksjon h2 {
+  color: var(--hjem-bg);
+  font-size: 1.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.ingress {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* vises mykt når de scrolles inn i bildet */
+.js .vis {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.js .vis.er-synlig {
+  opacity: 1;
+  transform: none;
+}
+
+.tall-rad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tall {
   text-align: center;
+  padding: 1.25rem 0.5rem;
+  border-radius: 0.75rem;
+  background: var(--hjem-bg);
+  color: #fff;
 }
 
-#om-meg h2,
-#prosjektet h2,
-#om-nkom h2 {
-  border-bottom: 1px solid #222;
-  padding-bottom: 0.4rem;
+.tall strong {
+  display: block;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 2rem;
+  line-height: 1.1;
 }
 
-#om-meg,
-#om-nkom,
-#prosjektet {
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-bottom: 4rem;
+.tall span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #b8b8d6;
 }
 
-.om-nkom-innhold,
-.prosjekt-innhold {
-  max-width: 42rem;
-  width: 100%;
-  margin-top: 2rem;
-  padding: 0 1.5rem;
-  text-align: left;
-  box-sizing: border-box;
-  overflow-wrap: break-word;
+.kort-rad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }
 
-.om-nkom-innhold h3,
-.prosjekt-innhold h3 {
-  font-size: 1.15rem;
-  margin-top: 1.5rem;
+.kort-rad-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.kort-rad-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.kort {
+  background: #fff;
+  border: 1px solid #e2e2e8;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#om-nkom .kort {
+  background: #f7f7f9;
+}
+
+.kort:hover {
+  transform: translateY(-4px);
+  border-color: var(--hjem-bg);
+  box-shadow: 0 8px 20px rgba(19, 19, 46, 0.1);
+}
+
+.kort > i {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--hjem-bg);
   margin-bottom: 0.5rem;
 }
 
-.prosjekt-innhold h3:first-child {
-  margin-top: 0;
-}
-
-.prosjekt-innhold a {
+.kort h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--hjem-bg);
-}
-
-.om-nkom-innhold p,
-.prosjekt-innhold p {
-  margin-bottom: 0.85rem;
-}
-
-.prosjekt-innhold ul,
-.prosjekt-innhold ol {
-  margin-bottom: 1rem;
-  padding-left: 1.25rem;
-}
-
-.prosjekt-innhold li {
   margin-bottom: 0.35rem;
 }
 
-#om-meg .om-meg-kort {
-  width: 18rem;
-  margin-top: 2rem;
-  border: none;
+.kort p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.faner {
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.faner .nav-link {
+  color: var(--hjem-bg);
+  background: #fff;
+  border: 1px solid #e2e2e8;
+  border-radius: 2rem;
+  padding: 0.45rem 1.15rem;
+}
+
+.faner .nav-link.active {
+  background: var(--hjem-bg);
+  border-color: var(--hjem-bg);
+  color: #fff;
+}
+
+.fane-tips {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.brikker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.brikker span {
+  background: #eeeef3;
+  color: var(--hjem-bg);
+  border-radius: 2rem;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.85rem;
+}
+
+.problemstilling {
+  margin: 2.5rem 0 0;
+  padding: 1.75rem 2rem;
   border-radius: 0.75rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  text-align: center;
-  padding: 1.75rem 1.25rem 1.5rem;
-  cursor: pointer;
-  background-color: #fff;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  background: var(--hjem-bg);
+  color: #fff;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
 }
 
-#om-meg .om-meg-kort:hover {
-  transform: translateY(-8px);
-  background-color: #e9ecef;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+.etikett {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b8b8d6;
 }
 
-#om-meg .om-meg-kort:active {
-  transform: translateY(-4px);
+.profil {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1rem;
+  background: #fff;
+  border: 1px solid #e2e2e8;
+  border-radius: 0.75rem;
+  text-align: left;
+  color: #333;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-#om-meg .om-meg-kort-bilde {
-  width: 140px;
-  height: 140px;
+.profil:hover {
+  transform: translateY(-2px);
+  border-color: var(--hjem-bg);
+}
+
+.profil-bilde {
+  object-position: 50% 22%;
+  width: 52px;
+  height: 52px;
   object-fit: cover;
   border-radius: 50%;
-  display: block;
-  margin: 0 auto 1.25rem;
+  flex-shrink: 0;
 }
 
-#om-meg .om-meg-kort-navn {
-  color: var(--hjem-bg);
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
-}
-
-#om-meg .om-meg-kort-rolle {
+.profil-tekst {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+  font-size: 0.9rem;
   color: #6c757d;
-  font-style: italic;
-  margin-bottom: 1rem;
 }
 
-#om-meg .om-meg-kort-tekst {
-  color: #222;
-  margin-bottom: 0;
+.profil-tekst strong {
+  color: var(--hjem-bg);
+  font-size: 1rem;
+}
+
+.profil-lenke {
+  color: var(--hjem-bg);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.bunn {
+  background: var(--hjem-bg);
+  color: #c9c9de;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+.bunn p {
+  margin: 0;
+}
+
+.bunn a {
+  color: #fff;
 }
 
 .om-meg-modal .modal-content {
@@ -227,6 +357,7 @@ h2 {
 }
 
 .om-meg-modal-bilde {
+  object-position: 50% 22%;
   width: 160px;
   height: 160px;
   object-fit: cover;
@@ -509,28 +640,27 @@ h2 {
     font-size: 1rem;
   }
 
-  #om-meg,
-  #prosjektet,
-  #om-nkom {
-    min-height: auto;
-    padding-top: 3.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .seksjon {
+    padding: 3.5rem 1rem;
   }
 
-  .om-nkom-innhold,
-  .prosjekt-innhold {
-    padding: 0;
-    margin-top: 1.5rem;
+  .tall-rad,
+  .kort-rad-4 {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  #om-meg .om-meg-kort {
-    width: 100%;
-    max-width: 18rem;
+  .kort-rad,
+  .kort-rad-2 {
+    grid-template-columns: 1fr;
   }
 
-  #om-meg .om-meg-kort:hover {
-    transform: none;
+  .problemstilling {
+    padding: 1.25rem;
+    font-size: 1.05rem;
+  }
+
+  .profil-lenke {
+    display: none;
   }
 
   .om-meg-modal .modal-dialog {

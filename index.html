@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
+  <script>document.documentElement.classList.add("js");</script>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="#hjem">
@@ -44,6 +45,9 @@
             <a class="nav-link" href="#prosjektet">Prosjektet</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#madalitsoModal">Om meg</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="refleksjon.html">Avsluttende refleksjon</a>
           </li>
         </ul>
@@ -57,90 +61,112 @@
     </div>
   </section>
 
-  <section id="om-nkom">
-    <h2>Om NKOM</h2>
-    <div class="om-nkom-innhold">
-      <p>Nasjonal kommunikasjonsmyndighet (Nkom) er den utøvende tilsyns- og forvaltningsmyndigheten for post og elektronisk kommunikasjon i Norge. Nkom er underlagt Digitaliserings- og forvaltningsdepartementet (DFD). Samferdselsdepartementet (SD) har fagansvaret for saker på postområdet.</p>
+  <section id="om-nkom" class="seksjon">
+    <div class="seksjon-indre">
+      <h2 class="vis">Om NKOM</h2>
+      <p class="ingress vis">Tilsynsmyndigheten som sørger for at internett, telefon og post fungerer i hele Norge.</p>
 
-      <h3>Hva Nkom gjør</h3>
-      <p>Digitale tjenester og internett er en viktig del av hverdagen. Nkom arbeider for at de skal være sikre, tilgjengelige og fungere for alle, uansett hvor du bor. Strategien mot 2030 peker mot trygge og pålitelige digitale tjenester i en tid med geopolitisk uro og økende usikkerhet. Nkom fører tilsyn etter flere lover; de viktigste er ekomloven og postloven.</p>
+      <div class="tall-rad vis">
+        <div class="tall"><strong>206</strong><span>ansatte</span></div>
+        <div class="tall"><strong>5</strong><span>kontorer</span></div>
+        <div class="tall"><strong>6</strong><span>avdelinger</span></div>
+        <div class="tall"><strong>2030</strong><span>strategi</span></div>
+      </div>
 
-      <h3>Organisering</h3>
-      <p>Hovedkontoret ligger i Lillesand, der om lag 183 av totalt 206 ansatte jobber. Resten er ved regionkontorene i Tromsø, Trondheim, Bergen og Oslo. Nkom er delt i fire fagavdelinger og to enheter: Spektrumsavdelingen, Marked og tjenester, Sikkerhetsavdelingen, Virksomhetsstyring og -utvikling, Kommunikasjon og samfunnskontakt og Strategisk analyse. Hver ledes av en direktør.</p>
+      <div class="kort-rad">
+        <article class="kort vis">
+          <i class="bi bi-shield-check"></i>
+          <h3>Oppdraget</h3>
+          <p>Trygge og tilgjengelige digitale tjenester for alle.</p>
+        </article>
+        <article class="kort vis">
+          <i class="bi bi-journal-text"></i>
+          <h3>Tilsyn</h3>
+          <p>Ekomloven og postloven, under DFD.</p>
+        </article>
+        <article class="kort vis">
+          <i class="bi bi-geo-alt"></i>
+          <h3>Lillesand</h3>
+          <p>Hovedkontor. Regionkontor i Tromsø, Trondheim, Bergen og Oslo.</p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="prosjektet">
-    <h2>Prosjektet</h2>
-    <div class="prosjekt-innhold">
-      <h3>Frekvensovervåkning: FK-fjernkontroll</h3>
-      <p>Jeg er Madalitso Phiri Skjelnes, IT- og informasjonssystemstudent ved Universitetet i Agder (<a href="mailto:madalitsos@uia.no">madalitsos@uia.no</a>). I praksis hos Nkom, Spektrum, jobber jeg som fullstack-utvikler.</p>
+  <section id="prosjektet" class="seksjon seksjon-lys">
+    <div class="seksjon-indre">
+      <h2 class="vis">Prosjektet</h2>
+      <p class="ingress vis">FK-fjernkontroll: ett sted å se alle målestasjonene som måler frekvensbruk.</p>
 
-      <h3>Hva prosjektet er</h3>
-      <p>Jeg jobber med FK-fjernkontroll: et system for oversikt over målestasjoner som brukes til måling av frekvensbruk. Målingene kan tas på land (blant annet med utstyr i bil), eller i felt med mobil/koffert og avtaler med skip rundt i Norge.</p>
-      <p>På lokasjonene står måleutstyr sammen med en liten PC som kan fjernstyres og kobles på (LattePanda). Tidligere var det dårlig oversikt over hva som sto hvor, og hvem som hadde ansvar. Nkom har gått over til Pure Service, men målet er å erstatte Pure Service med en felles, mer lesbar oversikt.</p>
-      <p>Spektrum har behov for nytt fjernstyringssystem for måleutstyret. Et eksempel er målestasjonen Brannmyra, der det i dag ikke ligger måleutstyr lokalt på den måten vi trenger — informasjon må hentes fra Pure Service.</p>
+      <button type="button" class="profil vis" data-bs-toggle="modal" data-bs-target="#madalitsoModal">
+        <img src="images/potrett.jpeg" class="profil-bilde" alt="Portrett av Madalitso">
+        <span class="profil-tekst">
+          <strong>Madalitso Phiri Skjelnes</strong>
+          <span>Fullstack-utvikler i praksis hos Nkom Spektrum</span>
+        </span>
+        <span class="profil-lenke">Om meg <i class="bi bi-arrow-right"></i></span>
+      </button>
 
-      <h3>Behovet</h3>
-      <p>Jeg skal bidra til et system der utstyr og stasjoner er registrert, slik at man kan identifisere dem og ha en database- og oversiktsløsning. Noen adresser er sensitive. Per i dag kjøres mye direkte på PC; sensitiv tilgang ekskluderes i første omgang.</p>
-      <p>Første steg er å forstå hvordan det gjøres i dag, og hvilke svakheter som finnes, slik at vi vet hva som kan bli bedre. Eksempler er dårlig lesbarhet (mange like gruppefelt) og slettknapp som må tenkes gjennom.</p>
-
-      <h3>Komponenter og utfordringer</h3>
-      <ul>
-        <li>Bredbånd på lokasjonene</li>
-        <li>LattePanda — den lille PCen som fjernstyrer og kobler seg på, sammen med måleutstyr</li>
-        <li>Utfordring: mobilbredbåndet ble plutselig flyttet rundt, noe som gjorde det krevende å holde oversikt</li>
+      <ul class="nav nav-pills faner vis" id="prosjektFaner" role="tablist">
+        <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#fane-problem" type="button" role="tab">Problemet</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#fane-losning" type="button" role="tab">Løsningen</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#fane-teknologi" type="button" role="tab">Teknologi</button></li>
+        <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#fane-krav" type="button" role="tab">Kravene</button></li>
       </ul>
 
-      <h3>Teknologi og rammer</h3>
-      <p>Jeg bygger mot en .NET-webapplikasjon i C#, med React og TypeScript i frontend. Det finnes en front-baseline i GitHub. Løsningen kjører lokalt i starten; sikkerhet er ikke hovedfokus nå, men bør komme etter hvert.</p>
-      <p>Vi må velge database eller fil, et lag som opererer på dataene, og et lag som viser dem. Det skal være et tydelig sted for vedlegg. Jeg skal også se på datamodellering og skalering: hva skjer når det kommer nytt utstyr?</p>
-      <p>Det skilles mellom funksjonelle krav (knapper og hva som skjer når man trykker) og ikke-funksjonelle krav (struktur, hvordan ting bygges, database).</p>
-      <p>Nkom har både en IT-side og en Spektrum-side. Behovet for fjernstyring og oversikt kommer fra Spektrum. Master data betyr én sannhet per type data. Best at løsningen leser data uten å endre kilden — sannheten skal leve ett sted. Fremover bør vi se på ServiceNow (API-et er dokumentert). Metodikk: Scrum og Kanban.</p>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="fane-problem" role="tabpanel">
+          <div class="kort-rad">
+            <article class="kort"><i class="bi bi-question-circle"></i><h3>Dårlig oversikt</h3><p>Uklart hva som står hvor, og hvem som har ansvar.</p></article>
+            <article class="kort"><i class="bi bi-arrow-left-right"></i><h3>Pure Service</h3><p>Skal erstattes av én felles, lesbar oversikt.</p></article>
+            <article class="kort"><i class="bi bi-wifi-off"></i><h3>Flyttet bredbånd</h3><p>Mobilbredbåndet ble flyttet rundt og ødela oversikten.</p></article>
+          </div>
+        </div>
 
-      <h3>Funksjonelle krav (første del)</h3>
-      <ol>
-        <li>Nettside med kartvisning av målestasjoner, med filtrering faste / mobile</li>
-        <li>Tabell med bare felt som er avgjørende i første del</li>
-        <li>Utstyrsliste med filtrering</li>
-        <li>Gå inn på en stasjon og se mer: utstyr, plassering, bilder</li>
-        <li>Bilder mer oversiktlige (bedre navn, gruppering av ting som går igjen)</li>
-        <li>Logg med datoer og tydelig oversikt</li>
-        <li>Kunde / kontaktperson</li>
-        <li>Oppsummert visning av den øvrige informasjonen</li>
-        <li>Oppdatert filtrering på kart, lett å lese og finne frem</li>
-        <li>Notat / husk</li>
-        <li>Flere objekter på samme sted: hover, popup, og mulighet til å bla til neste</li>
-        <li>Avklare hva som er standardisert og hva som ikke er det</li>
-        <li>Standardisering av begreper og felt</li>
-        <li>Felt for husk / tiltak — blant annet kritisk / må gjøres</li>
-      </ol>
+        <div class="tab-pane fade" id="fane-losning" role="tabpanel">
+          <div class="kort-rad">
+            <article class="kort"><i class="bi bi-map"></i><h3>Kart</h3><p>Alle stasjoner på ett kart, filtrert på faste og mobile.</p></article>
+            <article class="kort"><i class="bi bi-hdd-network"></i><h3>Stasjonsside</h3><p>Utstyr, plassering, bilder og logg samlet.</p></article>
+            <article class="kort"><i class="bi bi-database-lock"></i><h3>Én sannhet</h3><p>Leser master data uten å endre kilden. Sensitive adresser holdes utenfor først.</p></article>
+          </div>
+        </div>
 
-      <h3>Hva jeg prioriterer</h3>
-      <p>Jeg skal først lukke ut støy, gjøre kjernen robust, og holde løsningen lett å skalere slik at funksjonalitet kan bygges på senere. Fokus er kjernefunksjonalitet, ikke alt på en gang. Neste steg er skisse for hvordan løsningen kan se ut, entiteter, relasjoner og felt.</p>
+        <div class="tab-pane fade" id="fane-teknologi" role="tabpanel">
+          <div class="kort-rad kort-rad-4">
+            <article class="kort"><i class="bi bi-code-slash"></i><h3>.NET + C#</h3><p>Backend.</p></article>
+            <article class="kort"><i class="bi bi-window"></i><h3>React + TS</h3><p>Frontend.</p></article>
+            <article class="kort"><i class="bi bi-pc-display"></i><h3>LattePanda</h3><p>Fjernstyrt PC ved måleutstyret.</p></article>
+            <article class="kort"><i class="bi bi-kanban"></i><h3>Scrum + Kanban</h3><p>Arbeidsmetodikk.</p></article>
+          </div>
+        </div>
 
-      <h3>Problemstilling</h3>
-      <p>Hvordan kan jeg optimalisere dagens oversikt og arbeidsflyt for målestasjoner og fjernkontroll — og hva innebærer det å fylle rollen som fullstack-utvikler i dette arbeidet (forstå dagens praksis, modellere data, og bygge et lesbart, skalerbart system oppå master data)?</p>
+        <div class="tab-pane fade" id="fane-krav" role="tabpanel">
+          <p class="fane-tips">14 krav i første del, samlet i fire grupper.</p>
+          <div class="kort-rad kort-rad-2">
+            <article class="kort"><h3>Kart</h3><div class="brikker"><span>Kartvisning</span><span>Faste / mobile</span><span>Flere objekter på samme sted</span></div></article>
+            <article class="kort"><h3>Stasjon</h3><div class="brikker"><span>Utstyr</span><span>Plassering</span><span>Bilder</span><span>Kunde / kontakt</span></div></article>
+            <article class="kort"><h3>Data</h3><div class="brikker"><span>Tabell</span><span>Utstyrsliste</span><span>Filtrering</span><span>Standardiserte felt</span></div></article>
+            <article class="kort"><h3>Oppfølging</h3><div class="brikker"><span>Logg</span><span>Notat / husk</span><span>Kritisk / må gjøres</span></div></article>
+          </div>
+        </div>
+      </div>
+
+      <blockquote class="problemstilling vis">
+        <span class="etikett">Problemstilling</span>
+        Hvordan kan jeg optimalisere dagens oversikt og arbeidsflyt for målestasjoner og fjernkontroll, og hva innebærer det å være fullstack-utvikler i arbeidet?
+      </blockquote>
     </div>
   </section>
 
-  <section id="om-meg">
-    <h2>Om meg</h2>
-    <button type="button" class="card om-meg-kort" data-bs-toggle="modal" data-bs-target="#madalitsoModal">
-      <img src="images/om-meg.jpg" class="om-meg-kort-bilde" alt="Portrett av Madalitso">
-      <div class="card-body">
-        <h3 class="om-meg-kort-navn">Madalitso</h3>
-        <p class="om-meg-kort-rolle">Full-Stack Utvikler</p>
-        <p class="om-meg-kort-tekst">Interesse for full-stack utvikling, sikkerhet og fokus på levere fungerende og estetiske løsninger.</p>
-      </div>
-    </button>
-  </section>
+  <footer class="bunn">
+    <p>Praksisprosjekt hos Nkom &middot; Madalitso Phiri Skjelnes, UiA &middot; <a href="mailto:madalitsos@uia.no">madalitsos@uia.no</a></p>
+  </footer>
 
   <div class="modal fade om-meg-modal" id="madalitsoModal" tabindex="-1" aria-labelledby="madalitsoModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Lukk"></button>
-        <img src="images/om-meg.jpg" class="om-meg-modal-bilde" alt="Portrett av Madalitso">
+        <img src="images/potrett.jpeg" class="om-meg-modal-bilde" alt="Portrett av Madalitso">
         <h3 class="om-meg-modal-navn" id="madalitsoModalLabel">Madalitso</h3>
         <hr class="om-meg-modal-strek">
         <p class="om-meg-modal-rolle">Full-Stack Utvikler</p>
@@ -165,5 +191,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
   <script src="js/hjem-vanta.js"></script>
+  <script src="js/vis.js"></script>
 </body>
 </html>
