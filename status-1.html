@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/index.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body class="status-side">
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -52,59 +53,51 @@
   </nav>
 
   <main class="status-hoved">
-    <h1 class="visually-hidden">Status 1</h1>
+    <header class="status-topp vis">
+      <span class="etikett">Status 1</span>
+      <h1>Oppstart og første steg</h1>
+      <p class="ingress">Fra første dag og onboarding til å programmere på ekte.</p>
+    </header>
 
-    <article class="status-kort">
-      <h2>Oppstartsfase</h2>
-      <p>I denne første fasen har jeg fokusert på å bli kjent med Nkom og organisasjonen. Jeg har hatt onboarding, fått innføring i Nkoms samfunnsrolle, og begynt å sette meg inn i produksjonslinjen og prosjektstrukturen for arbeidet.</p>
+    <h2 class="status-del vis">Oppstartsfase</h2>
+    <div class="kort-rad kort-rad-4">
+      <article class="kort vis"><i class="bi bi-person-check"></i><h3>Rollen min</h3><p>Avklart hva jeg skal gjøre i prosjektet.</p></article>
+      <article class="kort vis"><i class="bi bi-door-open"></i><h3>Onboarding</h3><p>Innføring i Nkoms samfunnsrolle.</p></article>
+      <article class="kort vis"><i class="bi bi-diagram-2"></i><h3>Tjenestene</h3><p>Hvordan tjenestene henger sammen.</p></article>
+      <article class="kort vis"><i class="bi bi-key"></i><h3>Tilganger</h3><p>Verktøy og tilganger i et strengt sikkerhetsregime.</p></article>
+    </div>
 
-      <div class="status-milepaeler">
-        <h3>Viktige milepæler:</h3>
-        <ul>
-          <li>Avklart min rolle i prosjektet</li>
-          <li>Gjennomført onboarding og innføring i Nkoms samfunnsrolle</li>
-          <li>Startet produktforståelse og hvordan tjenestene henger sammen</li>
-          <li>Fått tildelt verktøy og tilganger i et strengt sikkerhetsregime</li>
-        </ul>
-      </div>
-    </article>
+    <h2 class="status-del vis">I gang!</h2>
+    <div class="kort-rad kort-rad-4">
+      <article class="kort vis"><i class="bi bi-people"></i><h3>Samarbeid</h3><p>Alle avdelinger må jobbe mot felles mål, selv med ulike oppgaver.</p></article>
+      <article class="kort vis"><i class="bi bi-code-slash"></i><h3>Fullstack</h3><p>Programmerer skikkelig, med DevOps i arbeidsflyten.</p></article>
+      <article class="kort vis"><i class="bi bi-plug"></i><h3>API-er</h3><p>Lært å koble til og bruke dem.</p></article>
+      <article class="kort vis"><i class="bi bi-stars"></i><h3>KI i arbeidet</h3><p>Claude som hjelp til koding og problemløsning.</p></article>
+    </div>
 
-    <article class="status-kort">
-      <h2>I gang!</h2>
+    <h2 class="status-del vis">Utfordringer og spennende ting</h2>
+    <div class="kort-rad kort-rad-2">
+      <article class="kort vis"><i class="bi bi-shield-lock"></i><h3>Strengt sikkerhetsregime</h3><p>Det tok tid å komme i gang, men ga god forståelse for hvor seriøst Nkom tar informasjonssikkerhet.</p></article>
+      <article class="kort vis"><i class="bi bi-lightning-charge"></i><h3>Lite team, stor effekt</h3><p>Spennende å se hvordan et lite utviklingsteam påvirker en hel etat, og hvordan teknologi og regelverk henger sammen.</p></article>
+    </div>
 
-      <div class="status-milepaeler">
-        <h3>Størrelse og organisering:</h3>
-        <ul>
-          <li>Har lært hvor viktig det er at alle avdelingene kommuniserer og jobber mot felles mål, selv om man i det daglige gjør svært ulike oppgaver</li>
-        </ul>
-      </div>
-
-      <div class="status-milepaeler">
-        <h3>Mine arbeidsoppgaver:</h3>
-        <ul>
-          <li>Har begynt å programmere skikkelig, med fullstack-utvikling der vi bruker DevOps i arbeidsflyten</li>
-          <li>Lært hvordan man kobler seg til og bruker API-er</li>
-          <li>Fått innføring i bruk av KI-verktøy (Claude/AI) som en del av utviklingsarbeidet, blant annet til å effektivisere koding og problemløsning</li>
-        </ul>
-      </div>
-
-      <div class="status-milepaeler">
-        <h3>Spesielle utfordringer og spennende ting:</h3>
-        <ul>
-          <li>Det strenge sikkerhetsregimet gjorde at det tok litt tid å komme i gang, men det ga samtidig god forståelse for hvor seriøst Nkom tar informasjonssikkerhet</li>
-          <li>Spennende å se hvordan et lite utviklingsteam kan ha stor innvirkning på en hel etat, og hvordan teknologi og regelverk henger tett sammen i praksis</li>
-        </ul>
-      </div>
-    </article>
-
-    <img class="status-bilde" src="images/Praksis-Nkom-Jobb-Bilde.jpeg" alt="Praksis hos Nkom">
-
-    <video class="status-bilde" controls preload="metadata">
-      <source src="images/1789748759969760%20(online-video-cutter.com)%20(1).mp4" type="video/mp4">
-      Nettleseren din støtter ikke avspilling av video.
-    </video>
+    <h2 class="status-del vis">Bilde og video</h2>
+    <div class="media-rad vis">
+      <figure><img src="images/Praksis-Nkom-Jobb-Bilde.jpeg" alt="Praksis hos Nkom"></figure>
+      <figure>
+        <video controls preload="metadata">
+          <source src="images/1789748759969760%20(online-video-cutter.com)%20(1).mp4" type="video/mp4">
+          Nettleseren din støtter ikke avspilling av video.
+        </video>
+      </figure>
+    </div>
   </main>
 
+  <footer class="bunn">
+    <p>Praksisprosjekt hos Nkom &middot; Madalitso Phiri Skjelnes, UiA</p>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/vis.js"></script>
 </body>
 </html>
