@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Status 2 – NKOM Praksis</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body class="status-side">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html#hjem">
+        <img src="images/nkom-logo.png" alt="NKOM-logo" height="40" width="40">
+        <span class="navbar-merke-tekst">Nasjonal kommunikasjonsmyndighet</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hovedmeny" aria-controls="hovedmeny" aria-expanded="false" aria-label="Åpne meny">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="hovedmeny">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="prosjektdagbok.html">Prosjektdagbok</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Status
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="status-1.html">Status 1</a></li>
+              <li><a class="dropdown-item active" href="status-2.html">Status 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#om-nkom">Om NKOM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#prosjektet">Prosjektet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="refleksjon.html">Avsluttende refleksjon</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="status-hoved">
+    <h1 class="visually-hidden">Status 2</h1>
+
+    <article class="status-kort">
+      <h2>Fra skisse til ekte løsning</h2>
+      <p>Siden Status 1 har jeg gått fra å forstå problemet til å bygge løsningen. Det som i starten var en idé om bedre oversikt over målestasjonene, er nå en applikasjon som viser ekte data.</p>
+
+      <div class="status-milepaeler">
+        <h3>Dette har skjedd:</h3>
+        <ul>
+          <li>Utviklet videre på løsningen og satt inn tabeller med ekte data fra stasjonene</li>
+          <li>Markert stasjonene i oversikten, slik at man ser hva som står hvor</li>
+          <li>Koblet løsningen til NAIS, som viser hvor skipene er akkurat nå</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="status-kort">
+      <h2>Utfordringer og lærdom</h2>
+
+      <div class="status-milepaeler">
+        <h3>Sensitive opplysninger:</h3>
+        <ul>
+          <li>Det har vært vanskelig å vise hva jeg har fått til, fordi dataene inneholder sensitive opplysninger som ikke kan deles åpent</li>
+          <li>Neste steg er å lage falske verdier og lokasjoner, slik at jeg kan vise den ferdige applikasjonen uten å avsløre noe sensitivt. Nå som mye er på plass, blir det en god demo</li>
+        </ul>
+      </div>
+
+      <div class="status-milepaeler">
+        <h3>Standardisering av elementer:</h3>
+        <ul>
+          <li>Nkom har et eget bibliotek som bestemmer hvordan hver knapp og tabell skal se ut</li>
+          <li>Slik blir alle løsningene i etaten like for brukerne, uansett hvem som har laget dem</li>
+          <li>Jeg har lært hvor viktig dette er. Det gir gjenkjennelighet, sparer tid i utviklingen og gjør løsningene enklere å vedlikeholde, og jeg ser på det som en lur måte å jobbe på</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="status-kort">
+      <h2>Hva som kommer</h2>
+      <p>Oppgaven har gått bra, og det har Nkom lagt merke til. Neste uke får jeg en ny oppgave i tillegg til den jeg allerede har, for å løse et annet ekte og reelt problem.</p>
+
+      <div class="status-milepaeler">
+        <h3>Neste steg:</h3>
+        <ul>
+          <li>Lage falske verdier og lokasjoner for å vise den ferdige applikasjonen</li>
+          <li>Starte på den nye oppgaven neste uke</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="status-kort">
+      <h2>Bilder</h2>
+      <div class="status-bilder-plass">
+        <div><i class="bi bi-image"></i></div>
+        <div><i class="bi bi-image"></i></div>
+        <div><i class="bi bi-image"></i></div>
+      </div>
+      <p class="status-kommer">Bilder fra løsningen og arbeidsdagen kommer snart.</p>
+    </article>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
