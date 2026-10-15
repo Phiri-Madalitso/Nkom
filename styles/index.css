@@ -566,6 +566,18 @@ h2 {
   gap: 1rem;
 }
 
+.media-rad-1 {
+  grid-template-columns: 1fr;
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+.media-rad-1 video {
+  max-height: none;
+  object-fit: contain;
+  background: #000;
+}
+
 .media-rad figure {
   margin: 0;
 }
