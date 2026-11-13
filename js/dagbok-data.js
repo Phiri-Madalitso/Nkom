@@ -77,6 +77,34 @@ const DAGBOK_INNLEGG = [
     foelelse: "Stolt"
   },
   {
+    dato: "2026-10-21",
+    jobbetMed: "Jeg begynte på den nye oppgaven ved siden av applikasjonen jeg allerede jobber med, for å løse et annet reelt problem. Jeg brukte dagen på å forstå problemet og kodebasen før jeg skrev noe.",
+    refleksjoner: "Det var spennende å få en ny oppgave, og samtidig litt uvant å bytte mellom to prosjekter. Jeg merket at jeg var tryggere enn første gang jeg satte meg inn i en kodebase.",
+    laerdom: "At det å lese og forstå først gjør det lettere å komme raskt i gang, og at erfaringen fra det første prosjektet kommer til nytte.",
+    foelelse: "Motivert"
+  },
+  {
+    dato: "2026-10-28",
+    jobbetMed: "Jeg jobbet videre med den nye oppgaven og delte tiden mellom den og det første prosjektet. Jeg tilpasset endringene til Nkoms bibliotek fra begynnelsen.",
+    refleksjoner: "Det er fint å slippe å tilpasse til standarden i etterkant slik jeg gjorde sist. Det sparer tid og gir et mer ryddig resultat.",
+    laerdom: "At det lønner seg å følge standarden fra første linje, i stedet for å rydde opp senere.",
+    foelelse: "Effektiv"
+  },
+  {
+    dato: "2026-11-04",
+    jobbetMed: "Jeg gikk gjennom endringene mine og forberedte dem for produksjon. Jeg testet grundig og rettet opp i små feil og detaljer før jeg la dem frem for teamet.",
+    refleksjoner: "Det er en annen følelse å skrive kode som skal ut i produksjon enn kode som bare skal vises frem. Jeg ble mer nøye med detaljene og tenkte mer på de som skal bruke løsningen.",
+    laerdom: "At produksjon stiller høyere krav til testing og kvalitet, og at det er verdt innsatsen.",
+    foelelse: "Nøye"
+  },
+  {
+    dato: "2026-11-11",
+    jobbetMed: "Jeg fikk endelig pushet endringene mine til produksjon.",
+    refleksjoner: "Det er skikkelig kult at noe jeg har laget faktisk tas i bruk på Nkoms reelle løsninger. Jeg følte både lettelse og stolthet etter å ha jobbet mot dette i flere uker.",
+    laerdom: "At det er mulig å bidra med noe ekte selv som praktikant, og at tillit fra teamet er noe man bygger over tid.",
+    foelelse: "Stolt"
+  },
+  {
     dato: "2026-11-13",
     jobbetMed: "Sist jeg var i praksis fikk jeg endelig pushet endringene mine til produksjon. I dag har jeg oppdatert nettsiden med Status 3 og skrevet det avsluttende refleksjonsnotatet.",
     refleksjoner: "Det er skikkelig kult at noe jeg har laget faktisk er i bruk på Nkoms egne, reelle løsninger. Det var et mål å levere noe som er til nytte, ikke bare en øvelse, og nå har jeg gjort det. Da jeg startet i august var jeg usikker på hvor mye jeg kunne bidra med, og nå står koden min i produksjon.",
