@@ -702,3 +702,68 @@ h2 {
     padding: 0.5rem 0.4rem;
   }
 }
+
+.refleksjon-topp {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.refleksjon-topp h1 {
+  color: var(--hjem-bg);
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.refleksjon-topp .etikett {
+  color: #6c757d;
+}
+
+.refleksjon-topp .ingress {
+  margin-bottom: 0;
+}
+
+.refleksjon-bilde {
+  width: 220px;
+  height: 280px;
+  flex-shrink: 0;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border-radius: 1rem;
+  border: 4px solid var(--hjem-bg);
+  box-shadow: 0 10px 28px rgba(19, 19, 46, 0.2);
+}
+
+.refleksjon-tekst p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #333;
+}
+
+.refleksjon-hoved .problemstilling {
+  margin: 0 0 1.5rem;
+}
+
+.refleksjon-hoved .problemstilling:last-of-type {
+  margin-top: 2.5rem;
+}
+
+.kort p a {
+  color: var(--hjem-bg);
+  font-weight: 700;
+}
+
+@media (max-width: 991.98px) {
+  .refleksjon-topp {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .refleksjon-bilde {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+}

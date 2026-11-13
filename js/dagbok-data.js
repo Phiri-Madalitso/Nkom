@@ -75,5 +75,12 @@ const DAGBOK_INNLEGG = [
     refleksjoner: "Det var veldig gøy at det gikk så bra, og jeg gleder meg til å begynne på noe nytt.",
     laerdom: "At jeg klarer å levere noe ekte, og at det gir tillit til å få nye oppgaver.",
     foelelse: "Stolt"
+  },
+  {
+    dato: "2026-11-13",
+    jobbetMed: "Sist jeg var i praksis fikk jeg endelig pushet endringene mine til produksjon. I dag har jeg oppdatert nettsiden med Status 3 og skrevet det avsluttende refleksjonsnotatet.",
+    refleksjoner: "Det er skikkelig kult at noe jeg har laget faktisk er i bruk på Nkoms egne, reelle løsninger. Det var et mål å levere noe som er til nytte, ikke bare en øvelse, og nå har jeg gjort det. Da jeg startet i august var jeg usikker på hvor mye jeg kunne bidra med, og nå står koden min i produksjon.",
+    laerdom: "At veien til produksjon handler om mer enn å skrive kode: lesbar kode, riktig standard, testing og tillit fra teamet. Og at det lønner seg å dokumentere underveis, for da er refleksjonen mye enklere å skrive til slutt.",
+    foelelse: "Stolt"
   }
 ];

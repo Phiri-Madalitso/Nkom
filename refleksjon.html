@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avsluttende refleksjon – NKOM Praksis</title>
+  <link rel="icon" type="image/png" href="images/nkom-logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body class="status-side refleksjon-side">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="index.html#hjem">
+        <img src="images/nkom-logo.png" alt="NKOM-logo" height="40" width="40">
+        <span class="navbar-merke-tekst">Nasjonal kommunikasjonsmyndighet</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#hovedmeny" aria-controls="hovedmeny" aria-expanded="false" aria-label="Åpne meny">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="hovedmeny">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="prosjektdagbok.html">Prosjektdagbok</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Status
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="status-1.html">Status 1</a></li>
+              <li><a class="dropdown-item" href="status-2.html">Status 2</a></li>
+              <li><a class="dropdown-item" href="status-3.html">Status 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#om-nkom">Om NKOM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#prosjektet">Prosjektet</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="refleksjon.html">Avsluttende refleksjon</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="status-hoved refleksjon-hoved">
+    <header class="refleksjon-topp vis">
+      <img src="images/refleksjon-portrett.png" class="refleksjon-bilde" alt="Portrett av Madalitso Phiri Skjelnes">
+      <div>
+        <span class="etikett">Avsluttende refleksjonsnotat</span>
+        <h1>Fra første dag til produksjon</h1>
+        <p class="ingress">Madalitso Phiri Skjelnes &middot; Fullstack-utvikler i praksis hos Nkom Spektrum &middot; 13. november 2026</p>
+      </div>
+    </header>
+
+    <blockquote class="problemstilling vis">
+      <span class="etikett">Problemstilling</span>
+      Hvordan kan jeg optimalisere dagens oversikt og arbeidsflyt for målestasjoner og fjernkontroll, og hva innebærer det å være fullstack-utvikler i arbeidet?
+    </blockquote>
+
+    <section class="refleksjon-tekst vis">
+      <p>Jeg startet i praksis 26. august med et stort bygg, et strengt sikkerhetsregime og en kodebase jeg ikke kjente. Nå, noen måneder senere, er endringene mine pushet til produksjon og i bruk på Nkoms faktiske løsninger. Det er det jeg er mest stolt av, fordi det betyr at arbeidet mitt har vært til nytte og ikke bare en øvelse. Her ser jeg tilbake på hva jeg har lært, hva som fungerte godt, og hva jeg ville gjort annerledes.</p>
+    </section>
+
+    <h2 class="status-del vis">Svar på problemstillingen</h2>
+    <section class="refleksjon-tekst vis">
+      <p>Jeg har optimalisert oversikten ved å samle det som før lå spredt på ett sted: tabeller med ekte data fra stasjonene, markerte stasjoner og NAIS i sanntid, slik at man ser hva som står hvor. Å være fullstack-utvikler har for meg handlet om å se hele kjeden. Det er dataene i backend, grensesnittet i frontend, og hensynet til sikkerhet, standard og de som faktisk skal bruke løsningen. Det er sjelden nok å være god på bare ett ledd, for en løsning er ikke bedre enn det svakeste leddet.</p>
+    </section>
+
+    <h2 class="status-del vis">Hva jeg har lært</h2>
+    <div class="kort-rad">
+      <article class="kort vis"><i class="bi bi-book"></i><h3>Lese før jeg skriver</h3><p>Å sette meg grundig inn i andres kode før jeg endrer noe, sparte meg for mange feil.</p></article>
+      <article class="kort vis"><i class="bi bi-grid-1x2"></i><h3>Standard gir verdi</h3><p>Nkoms bibliotek føltes begrensende først. Nå ser jeg at gjenkjennelighet og enklere vedlikehold veier tungt.</p></article>
+      <article class="kort vis"><i class="bi bi-shield-lock"></i><h3>Sikkerhet først</h3><p>Sensitive data må hensyn tas også når man skal vise frem arbeidet. Det lærte meg å tenke sikkerhet fra start.</p></article>
+      <article class="kort vis"><i class="bi bi-plug"></i><h3>Sanntid og API-er</h3><p>Jeg har lært å koble til eksterne tjenester som NAIS og få dataene til å fungere stabilt i en ekte applikasjon.</p></article>
+      <article class="kort vis"><i class="bi bi-diagram-3"></i><h3>Samarbeid</h3><p>Alle avdelinger jobber mot felles mål selv med ulike oppgaver, og et lite team kan gjøre stor forskjell for en hel etat.</p></article>
+      <article class="kort vis"><i class="bi bi-stars"></i><h3>KI som verktøy</h3><p>Claude har vært god hjelp til koding og problemløsning, så lenge jeg forstår koden selv og står ansvarlig for den.</p></article>
+    </div>
+
+    <h2 class="status-del vis">Lure ting jeg har gjort</h2>
+    <div class="kort-rad kort-rad-2">
+      <article class="kort vis"><i class="bi bi-mask"></i><h3>Falske data til demo</h3><p>Fordi ekte data ikke kan deles, lagde jeg falske verdier og lokasjoner. Da kunne jeg vise den ferdige løsningen uten å avsløre noe sensitivt.</p></article>
+      <article class="kort vis"><i class="bi bi-puzzle"></i><h3>Ferdige komponenter først</h3><p>Jeg brukte bibliotekets komponenter før jeg lagde egne. Det ga raskere arbeid, ensartet utseende og mindre å vedlikeholde.</p></article>
+      <article class="kort vis"><i class="bi bi-bug"></i><h3>Teste underveis</h3><p>Ved å teste jevnlig mens jeg bygget, oppdaget jeg feil tidlig, særlig da NAIS skulle spille sammen med resten.</p></article>
+      <article class="kort vis"><i class="bi bi-journal-text"></i><h3>Føre dagbok</h3><p>Å skrive etter hver praksisdag gjorde at lærdommene ikke gikk tapt. Dagboken er nå grunnlaget for denne refleksjonen.</p></article>
+    </div>
+
+    <h2 class="status-del vis">Hva jeg ville gjort annerledes</h2>
+    <div class="kort-rad kort-rad-2">
+      <article class="kort vis"><i class="bi bi-eye-slash"></i><h3>Planlegge demodata tidligere</h3><p>Jeg løste problemet med sensitive data sent. Neste gang lager jeg falske data fra første uke, så jeg kan vise fremdrift hele veien.</p></article>
+      <article class="kort vis"><i class="bi bi-camera"></i><h3>Dokumentere mer visuelt</h3><p>Jeg skulle tatt flere bilder og skjermopptak underveis, mens løsningen utviklet seg.</p></article>
+      <article class="kort vis"><i class="bi bi-chat-dots"></i><h3>Spørre tidligere</h3><p>Jeg brukte tid på å finne ut ting alene som en kollega kunne svart på på få minutter. Å spørre tidlig er en styrke, ikke en svakhet.</p></article>
+      <article class="kort vis"><i class="bi bi-rocket-takeoff"></i><h3>Mot produksjon fra start</h3><p>Jeg ville tenkt på krav til produksjon, som testing og standard, fra første linje i stedet for å tilpasse underveis.</p></article>
+    </div>
+
+    <h2 class="status-del vis">Veien videre</h2>
+    <section class="refleksjon-tekst vis">
+      <p>Praksisen har bekreftet at jeg vil jobbe som fullstack-utvikler, gjerne der sikkerhet og kvalitet står høyt. Jeg tar med meg tre ting: å lese og forstå før jeg endrer, å bruke standarder og ferdige løsninger, og å dokumentere underveis. Jeg er takknemlig for tilliten jeg har fått fra kollegaene hos Nkom, og for at jeg fikk jobbe på ekte løsninger fra dag én.</p>
+    </section>
+
+    <blockquote class="problemstilling vis">
+      <span class="etikett">Oppsummert</span>
+      Jeg kom for å lære å utvikle i en profesjonell setting. Jeg går ut med kode i produksjon, og med en tydelig forståelse av hva det vil si å levere noe som faktisk brukes.
+    </blockquote>
+  </main>
+
+
+  <footer class="bunn">
+    <p>Praksisprosjekt hos Nkom &middot; Madalitso Phiri Skjelnes, UiA</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/vis.js"></script>
+</body>
+</html>
